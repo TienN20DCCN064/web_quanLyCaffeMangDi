@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context.xsd
+	   		http://www.springframework.org/schema/tx 
+			http://www.springframework.org/schema/tx/spring-tx.xsd
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/account/**" />
+			<mvc:mapping path="/bill/**" />
+			<mvc:mapping path="/product/**" />
+			<mvc:mapping path="/employee/**" />
+			<mvc:mapping path="/history/**" />
+			<!-- <mvc:mapping path="/home/**"/> -->
+			<mvc:mapping path="/import/**" />
+			<mvc:mapping path="/machineLearning/**" />
+			<mvc:mapping path="/material/**" />
+			<mvc:mapping path="/promotion/**" />
+			<mvc:mapping path="/sell/**" />
+			<mvc:mapping path="/thongke/**" />
+
+			<mvc:mapping path="/home/trangchuquanly/**" />
+			<mvc:mapping path="/home/trangchunhanvien/**" />
+			<mvc:mapping path="/home/changepassword.htm" />
+			<mvc:mapping path="/home/changepasswordsuccess.htm" />
+			<mvc:mapping path="/home/profile/**" />
+			<mvc:mapping path="/home/thongke.htm" />
+			
+			<mvc:mapping path="/home/password/**" />
+			<mvc:mapping path="/login/logout.htm" />
+
+
+			<!-- <mvc:mapping path="/shop/**"/> <mvc:exclude-mapping path="/shop/main.htm"/> 
+				<mvc:exclude-mapping path="/shop/search.htm"/> <mvc:exclude-mapping path="/shop/product_detail.htm"/> -->
+			<bean class="ptithcm.interceptor.LoggerInterceptor" />
+		</mvc:interceptor>
+		<bean class="ptithcm.interceptor.GlobalInterceptor" />
+	</mvc:interceptors>
+
+</beans>
