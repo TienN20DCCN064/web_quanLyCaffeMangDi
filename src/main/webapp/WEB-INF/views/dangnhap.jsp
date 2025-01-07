@@ -6,6 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>ĐĂNG NHẬP</title>
+
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -31,6 +32,7 @@
 <link rel="stylesheet" href="${root}/resources/account/css/style.css">
 
 <title>Đăng Nhập</title>
+<a> năm mới khởi đầu mới ....</a>
 </head>
 <body>
 	<div class="half">
@@ -45,6 +47,7 @@
 
 							<div class="text-center mb-5" style="font-style: italic;" >
 								<h3>CaffeeCup Mang Đi</h3>
+								<a> năm mới khởi đầu mới ....</a>
 							</div>
 							<form
 								action="http://localhost:8080/Highlands/login/logininfo.htm"
